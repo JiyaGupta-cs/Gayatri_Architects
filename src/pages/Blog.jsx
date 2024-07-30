@@ -51,12 +51,12 @@ const Blog = () => {
         </div>
         <div className={ (currentSet=='0'? `right-0 `: `left-0 `)+`fixed bottom-8 flex justify-between px-4`}>
           {currentSet === 1 && (
-            <button onClick={handlePrevious} className="text-8xl text-[#C59D37] bg-transparent text-white py-2 px-4 rounded-md ">
+            <button onClick={handlePrevious} className="text-8xl text-[#C59D37] bg-transparent  py-2 px-4 rounded-md ">
               &lt;
             </button>
           )}
           {currentSet === 0 && (
-            <button onClick={handleNext} className="text-8xl text-[#C59D37] bg-transparent text-white py-2 px-4 rounded-md ">
+            <button onClick={handleNext} className="text-8xl text-[#C59D37] bg-transparent  py-2 px-4 rounded-md ">
               &gt;
             </button>
           )}
