@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
@@ -10,7 +12,7 @@ import Work from './pages/Work';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
      
           <Routes>
@@ -23,7 +25,7 @@ const App = () => {
           </Routes>
       
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
