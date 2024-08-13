@@ -1,6 +1,6 @@
 import React from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useLocation } from 'react-router-dom'; 
+import '../pages/Nav.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path ? ' text-[#000] hover:text-[#5a5a5a]' : 'text-[#7c7b7b] hover:bg-[#f1e7cd] hover:text-[#5a5a5a]';
 
   return (
-    <nav className={`md:bg-transparent text-white ${isOpen ? 'fixed top-0 right-0 left-0 bottom-0 bg-white z-50' : 'relative'}`}>
+    <nav className={`md:bg-transparent w-screen text-white ${isOpen ? 'fixed top-0 right-0 left-0 bottom-0 bg-white z-50' : 'relative'}`}>
       <div className="max-w-7xl mx-auto md:px-2 px-8 lg:px-8">
         <div className="relative flex items-center justify-between h-24">
           <div className="flex-1 flex items-center justify-between">
@@ -42,17 +42,34 @@ const Navbar = () => {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
-            <button
-              type="button"
-              className="bg-transparent border-0 font-black text-black inline-flex items-center justify-center p-2 rounded-md hover:text-[#7c7b7b] hover:bg-[#f1e7cd] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent"
-              onClick={toggleMenu}
-            >
-              {isOpen ? (
-                <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
-              ) : (
-                <Bars3Icon className="block h-10 w-10" aria-hidden="true" />
-              )}
-            </button>
+            <div className={`svg-icon ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+              <svg viewBox="0 0 100 100" width="40" height="40">
+                <rect
+                  className="top-line"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="25"
+                  rx="5"
+                />
+                <rect
+                  className="middle-line"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="45"
+                  rx="5"
+                />
+                <rect
+                  className="bottom-line"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="65"
+                  rx="5"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

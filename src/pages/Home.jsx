@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Carousel from '../components/Carousel'
 import Navbar from '../components/Navbar'
 
 const Home = () => {
+  const [showCarousel, setShowCarousel] = useState(false)
+
+  const handleCircleClick = () => {
+    setShowCarousel(true)
+  }
+
   return (
-    <div className='bg-white h-screen w-screen'>
-      <Navbar/>
-    <Carousel/>
+    <div className='bg-white h-screen w-screen flex flex-col items-center justify-center'>
+      <div className='fixed top-0'>
+      <Navbar />
+      </div>
+      
+      {!showCarousel ? (
+
+<div className=" w-full  bg-[] overflow-hidden flex justify-center items-center">
+     <button onClick={handleCircleClick} className='h-[60vh] w-[60vh] bg-[#F5EDDE] border-none focus:border-none rounded-[50%] w-[50vw]'></button>
+    </div>
+
+      ) : (
+        <Carousel/>
+      )}
     </div>
   )
 }
