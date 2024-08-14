@@ -18,7 +18,7 @@ const Home = () => {
       {!showCarousel ? (
 
 <div className=" w-full  bg-[] overflow-hidden flex justify-center items-center">
-     <button onClick={handleCircleClick} className='h-[60vh] w-[60vh] bg-[#F5EDDE] border-none focus:border-none rounded-[50%] w-[50vw]'></button>
+     <button onClick={handleCircleClick} className='h-[23rem] w-[23rem] md:h-[60vh] md:w-[60vh] bg-[#F5EDDE] border-none focus:border-none rounded-[50%]'></button>
     </div>
 
       ) : (
