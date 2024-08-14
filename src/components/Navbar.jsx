@@ -13,7 +13,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path ? ' text-[#000] hover:text-[#5a5a5a]' : 'text-[#7c7b7b] hover:bg-[#f1e7cd] hover:text-[#5a5a5a]';
 
   return (
-    <nav className={`md:bg-transparent w-screen text-white ${isOpen ? 'fixed top-0 right-0 left-0 bottom-0 bg-white z-50' : 'relative'}`}>
+    <nav className={`md:bg-transparent w-screen z-50 text-white ${isOpen ? 'fixed top-0 right-0 left-0 bottom-0 bg-white z-50' : 'relative'}`}>
       <div className="max-w-7xl mx-auto md:px-2 px-8 lg:px-8">
         <div className="relative flex items-center justify-between h-24">
           <div className="flex-1 flex items-center justify-between">

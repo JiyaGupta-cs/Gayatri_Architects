@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 const About = () => {
   return (
-    <div className='md:h-screen w-screen bg-[#f1e7cd] overflow-hidden'>
+    <div className='md:h-screen min-h-screen w-screen bg-[#f1e7cd] overflow-hidden'>
         <Navbar/>
         <div className='flex flex-col px-8 md:px-24 py-12 min-h-[80vh] gap-8 items-center justify-around'>
             <h2 className='text-[#7c7b7b] text-4xl'>About Us</h2>

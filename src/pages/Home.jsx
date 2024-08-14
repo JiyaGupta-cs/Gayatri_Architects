@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className='bg-white h-screen w-screen flex flex-col items-center justify-center'>
-      <div className='fixed top-0'>
+      <div className='fixed top-0 z-10'>
       <Navbar />
       </div>
       
