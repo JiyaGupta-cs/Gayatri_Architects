@@ -2,6 +2,7 @@
   "name": "ga",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://gayatriarchitects.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
